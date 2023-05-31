@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin Homepage</title>
+    <link rel="stylesheet" href="admin.css">
+  </head>
+  <body>
+    <div class="main-content">
+      <div id="welcome" class="banner">
+        <h1>Welcome Admin</h1>
+      </div>
+      <div class="bannerWhite">
+        <h1></h1>
+      </div>
+      <button class="add-class-btn" onclick="openAddClassPopup()">Create New Class</button>
+      <div style="float: right; margin-right: 20px;margin-top: 1px">
+        <button class="add-class-btn" onclick="logout()">Logout</button>
+      </div>
+      <div class="bannerWhite">
+        <h1></h1>
+      </div>
+      <div id="nonenrolledClasses" class="banner">
+        <h2>Available Classes</h2>
+      </div>
+      <div id="NRtableContainer"></div>
+      <div id="availableClasses" class="banner">
+        <h2>Available Classes For Students To Register</h2>
+      </div>
+      <div id="tableContainer">
+
+      </div>
+      <div id="availableStudents" class="banner">
+        <h2>Available Students</h2>
+      </div>
+      <div id="studentsTableContainer"></div>
+      <div id="popup"></div>
+      <!-- Popup window for adding a new class -->
+      <div id="add-class-popup">
+        <h2>Add New Class</h2>
+        <form id="myForm">
+          <label for="class-name">Class Name:</label>
+          <input type="text" id="class-name" name="class_name" required>
+          <label for="teacher">Teacher:</label>
+          <input type="text" id="teacher" name="teacher" required>
+          <label for="start-time">Start Time:</label>
+          <input type="time" id="start-time" name="start_time" required>
+          <label for="end-time">End Time:</label>
+          <input type="time" id="end-time" name="end_time" required>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+          <label for="cost">Cost:</label>
+          <input type="text" id="cost" name="cost" required>
+          <button type="submit" onclick="addClassFunction(event)">Add Class</button>
+          <button type="button" onclick="closeAddClassPopup()">Cancel</button>
+        </form>
+      </div>
+  </body>
+</html>
